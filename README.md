@@ -17,14 +17,16 @@ The conversation halts as soon as the UI agent prints **`PROJECT_COMPLETE`**.
 
 ## 📂 Folder Structure
 
-your_project/
-├── multi_agent_workflow.py # all agents + Streamlit UI in one file
+```bash
+coding_agent/
+├── multi_agent_workflow.py     # All agents + orchestration + Streamlit UI
 ├── tests/
-│ └── test_pipeline.py # pytest suite covering 7 evaluation criteria
-├── .env # holds OPENAI_API_KEY (git‑ignored)
-├── requirements.txt # python dependencies
-├── .gitignore # ignores .env, pycache, etc.
-└── README.md # (this file)
+│   └── test_pipeline.py        # Pytest-based evaluation of pipeline
+├── .env                        # Holds your OPENAI_API_KEY (git-ignored)
+├── requirements.txt            # Dependencies for running the system
+├── .gitignore                  # Ignores cache, .env, and test artifacts
+└── README.md                   # Project documentation
+```
 
 ---
 
@@ -48,6 +50,7 @@ Agents hand‑off by @‑mentioning the next stage.
 
 ## 🏗️ Workflow & Architecture
 
+```bash
 User Prompt → RequirementAgent
 ↓
 CodingAgent ↔ ReviewAgent (feedback loop until REVIEW_ACCEPTED)
@@ -59,6 +62,7 @@ TestCaseAgent
 DeployAgent
 ↓
 StreamlitUIAgent ──▶ PROJECT_COMPLETE
+```
 
 - **Speaker selection = `auto`** (agents dynamically decide who talks).
 - **Safety cap** `max_round=20` to avoid infinite chatter.
@@ -71,8 +75,8 @@ StreamlitUIAgent ──▶ PROJECT_COMPLETE
 ```bash
 # Make sure Python 3.10+ is installed.
 
-# 1. Change directory to your root folder
-cd root_folder/
+# 1. Change directory to coding_agent/
+cd coding_agent/
 
 # 2. Install deps
 pip install -r requirements.txt
