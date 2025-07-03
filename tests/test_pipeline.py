@@ -8,9 +8,12 @@ sys.path.append(str(Path(__file__).resolve().parents[1]))  # add project root
 app = importlib.import_module("multi_agent_workflow")
 
 MODEL = "gpt-4o"          # adjust for cost if needed
+# PROMPT = (
+#     "Build a Flask API that returns JSON {'greet':'hello'} at /hello. "
+#     "Include error handling, documentation, test cases, and a Streamlit UI. "
+# )
 PROMPT = (
-    "Build a Flask API that returns JSON {'greet':'hello'} at /hello. "
-    "Include error handling, documentation, test cases, and a Streamlit UI. "
+    "Create an Python app that takes in a block of text and summarize it using transformers library."
 )
 
 @pytest.fixture(scope="session")

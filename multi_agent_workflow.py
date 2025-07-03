@@ -120,7 +120,7 @@ def build_autogen_system(model_name: str = DEFAULT_MODEL):
             ui_agent,
         ],
         messages=[],
-        max_round=8,
+        max_round=20,
         speaker_selection_method="auto",
         allow_repeat_speaker=True,
     )
