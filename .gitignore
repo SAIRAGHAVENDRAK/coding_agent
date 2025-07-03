@@ -1,0 +1,30 @@
+# ───────── Python bytecode and cache ─────────
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# ───────── Pytest and test-related cache ─────────
+.cache/
+.pytest_cache/
+tests/__pycache__/
+tests/.pytest_cache/
+
+# ───────── Dotenv / secrets ─────────
+.env
+.env.*
+
+# ───────── Editor / IDE / OS files ─────────
+.vscode/
+*.code-workspace
+.DS_Store
+Thumbs.db
+
+# ───────── Streamlit session cache ─────────
+.streamlit/
+
+# ───────── Logs / outputs ─────────
+*.log
+last_run.json

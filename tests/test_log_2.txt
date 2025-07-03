@@ -1,0 +1,25 @@
+============================================== warnings summary =============================================== 
+..\Lib\site-packages\autogen\json_utils.py:10
+..\Lib\site-packages\autogen\json_utils.py:10
+  E:\Professional\projects\autogen_env\Lib\site-packages\autogen\json_utils.py:10: DeprecationWarning: jsonschema.RefResolver is deprecated as of v4.18.0, in favor of the https://github.com/python-jsonschema/referencing library, which provides more compliant referencing behavior as well as more flexible APIs for customization. A future release will remove RefResolver. Please file a feature request (on referencing) if you are missing an API for 
+the kind of customization you need.
+    from jsonschema import Draft7Validator, RefResolver
+
+..\Lib\site-packages\autogen\import_utils.py:56
+..\Lib\site-packages\autogen\import_utils.py:56
+..\Lib\site-packages\autogen\import_utils.py:56
+..\Lib\site-packages\autogen\import_utils.py:56
+  E:\Professional\projects\autogen_env\Lib\site-packages\autogen\import_utils.py:56: DeprecationWarning: Accessing jsonschema.__version__ is deprecated and will be removed in a future release. Use importlib.metadata directly to query for jsonschema's version.
+    sys.modules[self.name].__version__ if hasattr(sys.modules[self.name], "__version__") else None
+
+..\Lib\site-packages\pydantic\_internal\_config.py:323
+  E:\Professional\projects\autogen_env\Lib\site-packages\pydantic\_internal\_config.py:323: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)
+
+..\Lib\site-packages\autogen\oai\client.py:798: 8 warnings
+tests/test_pipeline.py: 15 warnings
+  E:\Professional\projects\autogen_env\Lib\site-packages\autogen\oai\client.py:798: PydanticDeprecatedSince20: The `copy` method is deprecated; use `model_copy` instead. See the docstring of `BaseModel.copy` for details about how to handle `include` and `exclude`. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    config_list = [config.copy() for config in config_list]  # make a copy before modifying
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+7 passed, 30 warnings in 69.12s (0:01:09)
